@@ -1,4 +1,4 @@
-# Tax-Fraud-Detection-Data-Pipeline
+
 # 🏦 Tax Fraud Detection Data Pipeline
 
 This project simulates a **real-world tax fraud detection system** by building a scalable **data engineering + machine learning pipeline**.  
@@ -28,6 +28,17 @@ It ingests synthetic taxpayer data from multiple sources, cleans & processes it 
 ---
 
 ## 🏗️ Architecture
+
+tax-fraud-detection-pipeline/
+├── dags/ # Airflow DAG
+├── jobs/ # ETL + ML jobs
+├── data/ # Raw/Silver/Warehouse data
+├── sql/ # Warehouse schema
+├── docker/ # Infra setup
+├── notebooks/ # EDA & ML experiments
+├── docs/ # Documentation & diagrams
+├── tests/ # Data quality tests
+└── README.md
 
 ![Architecture Diagram](docs/architecture.png)
 
