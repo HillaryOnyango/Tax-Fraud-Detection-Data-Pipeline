@@ -184,8 +184,6 @@ MIT License – free to use and modify.**
 
 
 
----
-
 # 3. Documentation Outline (`/docs/`)
 
 Inside `docs/`, include:
@@ -206,7 +204,7 @@ Inside `docs/`, include:
    - Step-by-step environment setup (Docker Compose, local dev)  
    - Airflow + Postgres config  
 
----
+
 
 ⚡ With this, you’ll have a **portfolio-ready project**: clear structure, professional README, and good documentation.  
 
