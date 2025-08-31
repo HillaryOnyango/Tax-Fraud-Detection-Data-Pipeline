@@ -207,6 +207,4 @@ Inside `docs/`, include:
    - Step-by-step environment setup (Docker Compose, local dev)  
    - Airflow + Postgres config  
 
-
-
 ---
