@@ -29,6 +29,24 @@ It ingests synthetic taxpayer data from multiple sources, cleans & processes it 
 
 ## 🏗️ Architecture
 
+
+
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/c6246654-9fdd-4141-9fd0-c811eb1664bc" />
+
+
+
+**Pipeline Flow:**
+1. Ingest tax data (CSV, DB, PDFs → OCR) → **Raw Zone (Bronze)**
+2. Clean & transform with PySpark → **Clean Zone (Silver)**
+3. Load to PostgreSQL Warehouse → **Analytics Zone (Gold)**
+4. Apply ML anomaly detection models → flag suspicious filings
+5. Send alerts → compliance officers
+
+---
+
+## 📂 Project Structure
+
 tax-fraud-detection-pipeline/
 
 ├── dags/ # Airflow DAG
@@ -48,19 +66,4 @@ tax-fraud-detection-pipeline/
 ├── tests/ # Data quality tests
 
 └── README.md
-
-
-
-![Architecture Diagram](docs/architecture.png)
-
-**Pipeline Flow:**
-1. Ingest tax data (CSV, DB, PDFs → OCR) → **Raw Zone (Bronze)**
-2. Clean & transform with PySpark → **Clean Zone (Silver)**
-3. Load to PostgreSQL Warehouse → **Analytics Zone (Gold)**
-4. Apply ML anomaly detection models → flag suspicious filings
-5. Send alerts → compliance officers
-
----
-
-## 📂 Project Structure
 
