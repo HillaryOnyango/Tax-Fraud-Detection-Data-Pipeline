@@ -91,6 +91,7 @@ Fraudulent cases are injected intentionally (e.g., deductions > income, unusuall
   - `tax_year`, `declared_income`, `claimed_expenses`, `deductions`, `tax_paid`
   - `fraud_flag` (for validation only)
 
+---
 
 ## 📦 Setup & Run
 
@@ -167,6 +168,7 @@ Unique (taxpayer_id, tax_year)
 Run tests:
 pytest tests/
 
+---
 
 📌** Next Steps
 **
@@ -177,6 +179,7 @@ Deploy to cloud (AWS/GCP/Azure)
 Integrate model monitoring (drift detection, retraining)
 
 Add CI/CD for Airflow DAGs + tests
+---
 
 **📜 License
 
@@ -206,6 +209,4 @@ Inside `docs/`, include:
 
 
 
-⚡ With this, you’ll have a **portfolio-ready project**: clear structure, professional README, and good documentation.  
-
-Do you want me to also **generate the architecture diagram (`architecture.png`)** so you can drop it into the docs folder?
+---
