@@ -45,9 +45,9 @@ def generate_record(taxpayer_id):
     
     # Generate base income (in Kenyan Shillings)
     if random.random() < 0.05:  # 5% high-income individuals
-        income = random.randint(5000000, 50000000)  # 5M to 50M KES
+        income = random.randint(500000, 1000000)  # 500K to 1M KES
     else:
-        income = random.randint(200000, 5000000)    # 200K to 5M KES
+        income = random.randint(30000, 500000)    # 30K to 500K KES
     
     if fraud_type == 'none':
         # Normal case
@@ -57,14 +57,14 @@ def generate_record(taxpayer_id):
         
     elif fraud_type == 'zero_tax':
         # High income but zero tax paid
-        income = random.randint(10000000, 50000000)  # 10M to 50M KES
+        income = random.randint(800000, 1000000)  # 800K to 1M KES
         deductions = random.randint(0, int(income * 0.3))
         declared_tax = int(income * random.uniform(0.1, 0.3))
         paid_tax = 0
         
     elif fraud_type == 'negative_deductions':
         # Negative deductions (impossible case)
-        deductions = random.randint(-1000000, -100000)
+        deductions = random.randint(-50000, -10000)  # Smaller negative deductions
         declared_tax = int(income * random.uniform(0.1, 0.3))
         paid_tax = declared_tax
         
@@ -76,7 +76,7 @@ def generate_record(taxpayer_id):
         
     else:  # excessive_deductions
         # Deductions higher than income
-        deductions = random.randint(income + 100000, income + 1000000)
+        deductions = random.randint(income + 10000, income + 50000)  # Smaller excessive deductions
         declared_tax = int(income * random.uniform(0.1, 0.3))
         paid_tax = declared_tax
     
